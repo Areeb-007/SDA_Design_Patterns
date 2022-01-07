@@ -2,13 +2,15 @@
     "name": "flutter_docker",
     "context": "..",
     "dockerFile": "../Dockerfile",
+    "appPort": [3000],
+    // "image": "matspfeiffer/flutter:beta",
     "remoteUser": "developer",
     "mounts": ["source=/dev/bus/usb,target=/dev/bus/usb,type=bind"],
     "settings": {
       "terminal.integrated.shell.linux": null
     },
     "runArgs": ["--privileged"],
-    "extensions": ["dart-code.flutter"],
+    "extensions": ["dart-code.flutter","dart-code.flutter"],
     "workspaceMount": "source=${localWorkspaceFolder}/workspace,target=/home/developer/workspace,type=bind,consistency=delegated",
     "workspaceFolder": "/home/developer/workspace"
   }

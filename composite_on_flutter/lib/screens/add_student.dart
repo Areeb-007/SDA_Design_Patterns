@@ -9,7 +9,8 @@ class AddStudent extends StatefulWidget {
 }
 
 class _AddStudentState extends State<AddStudent> {
-  Student student = Student(id: 0, name: '', age: 0);
+  Student student =
+      Student(id: 0, name: '', age: 0, rollNumber: '', semester: 0);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

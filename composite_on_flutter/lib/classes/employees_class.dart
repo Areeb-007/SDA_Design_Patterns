@@ -1,4 +1,5 @@
 import 'package:composite_on_flutter/classes/person_class.dart';
+import 'package:composite_on_flutter/classes/strategy/i_eligibility.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
@@ -15,5 +16,13 @@ class Employees implements Person {
         return persons[index].displayPerson();
       },
     );
+  }
+
+  @override
+  IEligibility eligibility = StudentEligiblity();
+
+  @override
+  String getEliblity() {
+    return eligibility.getEligibility();
   }
 }
